@@ -2,12 +2,13 @@
   "manifest_version": "0.3",
   "name": "amazing-marvin",
   "display_name": "Amazing Marvin",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "Use every stable Amazing Marvin endpoint available to its limited API token.",
   "long_description": "Connect Claude Desktop to all nine stable Amazing Marvin endpoints available to the limited API token. One optional switch adds five tested experimental read tools.",
   "author": {
     "name": "Alejo Acelas"
   },
+  "license": "MIT",
   "documentation": "https://github.com/alejoacelas/amazing-marvin-mcp#readme",
   "support": "https://github.com/alejoacelas/amazing-marvin-mcp/issues",
   "privacy_policies": [

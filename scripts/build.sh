@@ -9,7 +9,7 @@ trap 'rm -rf "$stage_dir"' EXIT HUP INT TERM
 
 mkdir -p "$stage_dir/extension" "$output_dir"
 output_dir=$(CDPATH= cd -- "$output_dir" && pwd)
-cp "$project_dir/manifest.json" "$project_dir/server.js" "$project_dir/package.json" "$project_dir/package-lock.json" "$project_dir/.mcpbignore" "$stage_dir/extension/"
+cp "$project_dir/manifest.json" "$project_dir/server.js" "$project_dir/package.json" "$project_dir/package-lock.json" "$project_dir/.mcpbignore" "$project_dir/LICENSE" "$stage_dir/extension/"
 cd "$stage_dir/extension"
 npm ci --omit=dev --ignore-scripts --no-audit --no-fund
 npx --yes @anthropic-ai/mcpb@2.1.2 validate manifest.json

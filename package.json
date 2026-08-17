@@ -1,9 +1,10 @@
 {
   "name": "amazing-marvin-mcp",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "private": true,
   "type": "module",
   "description": "Local Amazing Marvin MCP server and Claude Desktop extension",
+  "license": "MIT",
   "engines": {
     "node": ">=20"
   },

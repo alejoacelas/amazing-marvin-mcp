@@ -75,7 +75,7 @@ async function connect(root, { timeout = 1_000, interval = 0, enableBetaReads = 
     },
     stderr: 'pipe'
   });
-  const client = new Client({ name: 'integration-test', version: '0.3.0' });
+  const client = new Client({ name: 'integration-test', version: '0.3.1' });
   await client.connect(transport);
   return { client, transport };
 }

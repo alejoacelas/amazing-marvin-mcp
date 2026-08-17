@@ -222,7 +222,7 @@ function register(server, name, config, handler) {
   });
 }
 
-const server = new McpServer({ name: 'amazing-marvin', version: '0.3.0' });
+const server = new McpServer({ name: 'amazing-marvin', version: '0.3.1' });
 const readAnnotations = { readOnlyHint: true, destructiveHint: false, idempotentHint: true, openWorldHint: true };
 const writeAnnotations = { readOnlyHint: false, destructiveHint: false, idempotentHint: false, openWorldHint: true };
 

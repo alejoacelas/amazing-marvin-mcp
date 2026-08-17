@@ -21,7 +21,7 @@ const transport = new StdioClientTransport({
   },
   stderr: 'pipe'
 });
-const client = new Client({ name: 'real-account-smoke', version: '0.3.0' });
+const client = new Client({ name: 'real-account-smoke', version: '0.3.1' });
 
 function parse(result, name) {
   if (result.isError) throw new Error(`${name}: ${result.content?.[0]?.text || 'tool error'}`);
