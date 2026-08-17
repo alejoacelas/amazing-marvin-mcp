@@ -5,7 +5,7 @@ Use Amazing Marvin from Claude Desktop through a local MCP server.
 ## Install the desktop extension
 
 1. [Download `amazing-marvin.mcpb`](https://github.com/alejoacelas/amazing-marvin-mcp/releases/latest/download/amazing-marvin.mcpb).
-2. In Claude Desktop, open **Settings → Extensions → Advanced settings → Install Extension…** and choose the downloaded file.
+2. Click the downloaded file to open it in Claude Desktop.
 3. Paste `API_TOKEN` from **Amazing features → Integrations → API**. Do not use `FULL_ACCESS_TOKEN`.
 
 The extension includes its JavaScript runtime dependencies. It needs no Git, Python,
@@ -57,4 +57,3 @@ The build writes `dist/amazing-marvin-<version>.mcpb`. The construction and rele
 checks are in [reproduce/README.md](reproduce/README.md).
 
 Amazing Marvin API documentation: [Marvin API wiki](https://github.com/amazingmarvin/MarvinAPI/wiki/Marvin-API).
-
