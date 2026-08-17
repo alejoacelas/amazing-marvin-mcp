@@ -20,6 +20,17 @@ npm audit --omit=dev
 ./scripts/build.sh
 ```
 
+The package exposes `server.js` as the `amazing-marvin-mcp` executable. Verify the
+same path ChatGPT Desktop uses before release:
+
+```bash
+npm exec --yes --package=. -- amazing-marvin-mcp </dev/null
+```
+
+It must exit successfully on stdin EOF without writing non-protocol output. The
+README's GitHub `npx` command is pinned to the release tag; update it with each
+version.
+
 Before release, extract the exact `.mcpb` into a path containing spaces and Unicode,
 run both protocol smokes against its `server.js` with a minimal `PATH`, inspect the
 archive for development files and credentials, and install the same bytes in Claude
@@ -29,4 +40,3 @@ Real-account scripts require `AMAZING_MARVIN_API_TOKEN` in the environment. They
 not print or save it. `smoke:real` writes fixtures; use only a disposable account and
 inspect the script before running it. The endpoint evidence and release decisions are
 in [docs/endpoint-support.md](../docs/endpoint-support.md).
-

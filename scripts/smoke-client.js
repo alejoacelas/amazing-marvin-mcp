@@ -12,7 +12,7 @@ const transport = new StdioClientTransport({
 });
 const protocolVersion = process.env.MCP_TEST_PROTOCOL_VERSION;
 const client = new Client(
-  { name: 'amazing-marvin-smoke-test', version: '0.3.1' },
+  { name: 'amazing-marvin-smoke-test', version: '0.3.2' },
   protocolVersion ? { supportedProtocolVersions: [protocolVersion] } : undefined
 );
 

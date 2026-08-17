@@ -42,6 +42,13 @@ test('server never references the full-access token header', async () => {
   assert.equal(source.includes("MIN_INTERVAL_MS || 3_100"), true);
 });
 
+test('repository can be launched directly by npx', async () => {
+  const packageJson = JSON.parse(await readFile(new URL('../package.json', import.meta.url)));
+  const source = await readFile(new URL('../server.js', import.meta.url), 'utf8');
+  assert.equal(packageJson.bin['amazing-marvin-mcp'], 'server.js');
+  assert.equal(source.startsWith('#!/usr/bin/env node\n'), true);
+});
+
 test('server exits cleanly on stdin EOF and writes no non-protocol stdout', async () => {
   const child = spawn(process.execPath, ['server.js'], {
     cwd: new URL('..', import.meta.url),

@@ -1,6 +1,25 @@
 # Amazing Marvin
 
-Use Amazing Marvin from Claude Desktop through a local MCP server.
+Use Amazing Marvin from ChatGPT Desktop or Claude Desktop through a local MCP server.
+
+## Connect ChatGPT Desktop
+
+Install [Node.js 20 or later](https://nodejs.org/en/download), then add a custom MCP
+server with these fields:
+
+- **Name:** `Amazing Marvin`
+- **Type:** `STDIO`
+- **Command to launch:** `npx --yes github:alejoacelas/amazing-marvin-mcp#v0.3.2`
+- **Environment variable:** `AMAZING_MARVIN_API_TOKEN` = the limited `API_TOKEN` from
+  **Amazing features → Integrations → API**
+
+Leave arguments, environment-variable passthrough and working directory blank. Save
+the server, enable it in a new chat, and ask: “Test my Amazing Marvin connection.”
+Do not use `FULL_ACCESS_TOKEN`.
+
+`npx` downloads this repository and starts its MCP server; the user does not need to
+clone it or find `server.js`. The API token remains necessary because Amazing Marvin
+does not provide delegated sign-in for this API.
 
 ## Install the desktop extension
 
