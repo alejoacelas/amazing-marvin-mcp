@@ -1,0 +1,24 @@
+{
+  "name": "amazing-marvin-mcp",
+  "version": "0.3.0",
+  "private": true,
+  "type": "module",
+  "description": "Local Amazing Marvin MCP server and Claude Desktop extension",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "test": "node --test",
+    "smoke": "node scripts/smoke-client.js",
+    "smoke:legacy": "MCP_TEST_PROTOCOL_VERSION=2025-06-18 node scripts/smoke-client.js",
+    "smoke:real": "node scripts/real-account-smoke.js",
+    "smoke:nonstable": "node scripts/nonstable-account-smoke.js"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/server": "2.0.0",
+    "zod": "4.1.12"
+  },
+  "devDependencies": {
+    "@modelcontextprotocol/client": "2.0.0"
+  }
+}

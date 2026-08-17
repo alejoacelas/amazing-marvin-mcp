@@ -1,0 +1,98 @@
+{
+  "manifest_version": "0.3",
+  "name": "amazing-marvin",
+  "display_name": "Amazing Marvin",
+  "version": "0.3.0",
+  "description": "Use every stable Amazing Marvin endpoint available to its limited API token.",
+  "long_description": "Connect Claude Desktop to all nine stable Amazing Marvin endpoints available to the limited API token. One optional switch adds five tested experimental read tools.",
+  "author": {
+    "name": "Alejo Acelas"
+  },
+  "documentation": "https://github.com/alejoacelas/amazing-marvin-mcp#readme",
+  "support": "https://github.com/alejoacelas/amazing-marvin-mcp/issues",
+  "privacy_policies": [
+    "https://amazingmarvin.com/privacy-policy"
+  ],
+  "server": {
+    "type": "node",
+    "entry_point": "server.js",
+    "mcp_config": {
+      "command": "node",
+      "args": [
+        "${__dirname}/server.js"
+      ],
+      "env": {
+        "AMAZING_MARVIN_API_TOKEN": "${user_config.api_token}",
+        "AMAZING_MARVIN_ENABLE_BETA_READS": "${user_config.enable_beta_reads}"
+      }
+    }
+  },
+  "compatibility": {
+    "platforms": [
+      "darwin"
+    ],
+    "runtimes": {
+      "node": ">=20"
+    }
+  },
+  "user_config": {
+    "api_token": {
+      "type": "string",
+      "title": "Amazing Marvin limited API token",
+      "description": "Paste API_TOKEN from Amazing features → Integrations → API",
+      "sensitive": true,
+      "required": true
+    },
+    "enable_beta_reads": {
+      "type": "boolean",
+      "title": "Enable experimental features",
+      "description": "Expose account identity, direct children, time blocks, time-history, and kudos reads. Marvin does not label these endpoints stable.",
+      "default": false,
+      "required": false
+    }
+  },
+  "tools": [
+    {
+      "name": "marvin_test_connection",
+      "description": "Verify the limited API token without reading task data."
+    },
+    {
+      "name": "marvin_get_todays_tasks",
+      "description": "List scheduled tasks and projects for one date."
+    },
+    {
+      "name": "marvin_get_due_tasks",
+      "description": "List open tasks and projects due by one date."
+    },
+    {
+      "name": "marvin_get_categories",
+      "description": "List categories and projects with IDs and parent relationships."
+    },
+    {
+      "name": "marvin_get_labels",
+      "description": "List labels with IDs and group information."
+    },
+    {
+      "name": "marvin_get_goals",
+      "description": "List goals, optionally including notes and detailed sections."
+    },
+    {
+      "name": "marvin_get_tracked_item",
+      "description": "Show the task currently being time-tracked."
+    },
+    {
+      "name": "marvin_add_task",
+      "description": "Create one task with scheduling and organization fields."
+    },
+    {
+      "name": "marvin_add_project",
+      "description": "Create one project/category with scheduling and organization fields."
+    }
+  ],
+  "tools_generated": true,
+  "keywords": [
+    "tasks",
+    "productivity",
+    "amazing-marvin"
+  ]
+}

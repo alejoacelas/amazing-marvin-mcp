@@ -1,0 +1,6 @@
+test/
+scripts/
+*.mcpb
+.DS_Store
+npm-debug.log*
+node_modules/**/src/
