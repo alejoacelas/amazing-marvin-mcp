@@ -2,6 +2,15 @@
 
 Use Amazing Marvin from ChatGPT Desktop or Claude Desktop through a local MCP server.
 
+## Connect with Claude Desktop
+
+1. [Download `amazing-marvin.mcpb`](https://github.com/alejoacelas/amazing-marvin-mcp/releases/latest/download/amazing-marvin.mcpb).
+2. Click the downloaded file to open it in Claude Desktop.
+3. Paste `API_TOKEN` from **Amazing features → Integrations → API**. Do not use `FULL_ACCESS_TOKEN`.
+
+The extension includes its JavaScript runtime dependencies. It needs no Git, Python,
+Homebrew, npm, terminal or hosted service. It currently supports macOS.
+
 ## Connect ChatGPT Desktop
 
 Install [Node.js 20 or later](https://nodejs.org/en/download), then add a custom MCP
@@ -20,15 +29,6 @@ Do not use `FULL_ACCESS_TOKEN`.
 `npx` downloads this repository and starts its MCP server; the user does not need to
 clone it or find `server.js`. The API token remains necessary because Amazing Marvin
 does not provide delegated sign-in for this API.
-
-## Install the desktop extension
-
-1. [Download `amazing-marvin.mcpb`](https://github.com/alejoacelas/amazing-marvin-mcp/releases/latest/download/amazing-marvin.mcpb).
-2. Click the downloaded file to open it in Claude Desktop.
-3. Paste `API_TOKEN` from **Amazing features → Integrations → API**. Do not use `FULL_ACCESS_TOKEN`.
-
-The extension includes its JavaScript runtime dependencies. It needs no Git, Python,
-Homebrew, npm, terminal or hosted service. It currently supports macOS.
 
 ## Install from source
 
